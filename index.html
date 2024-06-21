@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion estados</title>
+    <link rel="stylesheet" href="./index.css">
+    <script type="module" src="./src/controllers/script.mjs"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Estados de México</h1>
+        <p>Agrega los estados de México y sus conexiones.</p>
+
+        <form id="stateForm">
+            <div class="form-group">
+                <label for="name">Nombre del Estado</label>
+                <input type="text" id="name" placeholder="Ingresa el nombre del estado">
+                <button type="button" class="method-button" id="agregar">Agregar</button>
+            </div>
+
+            <div class="form-group">
+                <label for="estado1">Estado 1 (ID)</label>
+                <input type="text" id="estado1" placeholder="Ingresa el ID del estado 1">
+            </div>
+
+            <div class="form-group">
+                <label for="estado2">Estado 2 (ID)</label>
+                <input type="text" id="estado2" placeholder="Ingresa el ID del estado 2">
+            </div>
+
+            <div class="form-group">
+                <label for="distancia">Distancia (KM)</label>
+                <input type="text" id="distancia" placeholder="Ingresa la distancia en KM">
+            </div>
+
+            <button type="button" id="edge" class="method-button">Agregar Conexión</button>
+
+            <div class="form-group">
+                <label for="salidaDfs">Recorrido en Profundidad</label>
+                <input type="text" id="salidaDfs" placeholder="El recorrido en profundidad se mostrará aquí" readonly>
+            </div>
+
+            <button type="button" id="dfs" class="method-button">Realizar Recorrido en Profundidad</button>
+            
+            <div class="form-group">
+                <label for="origen">Ciudad Origen</label>
+                <input type="text" id="origen" placeholder="Ingresa la ciudad origen">
+            </div>
+
+            <div class="form-group">
+                <label for="destino">Ciudad Destino</label>
+                <input type="text" id="destino" placeholder="Ingresa la ciudad destino">
+            </div>
+
+            <button type="button" id="rutaCorta" class="method-button">Encontrar Ruta Más Corta</button>
+        </form>
+    </div>
+</body>
+</html>
