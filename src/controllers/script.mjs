@@ -51,7 +51,9 @@ dfs.addEventListener("click", () => {
 rutaCorta.addEventListener("click", () => {
     let origen = document.getElementById("origen").value
     let destino = document.getElementById("destino").value
+    let resultado = document.getElementById("resultado")
 
-    let ruta = grafo.dijkstra(origen, destino)
-    alert(ruta)
+    grafo.dijkstra(origen, destino, (ruta)=>{
+        resultado.value = ruta
+    })
 })
